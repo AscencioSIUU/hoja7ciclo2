@@ -28,15 +28,22 @@ public class App {
             }
         }
         System.out.println(dictionary);
-        System.out.println("Ingrese su oracion para traducir: ");
-        String input = teclado.nextLine();
+        ArrayList<String> files = editor.readTXTFile("/prueba1.txt");
+        for(String file : files){
+            String[] words = file.split("\\s+");
 
-        String[] words = input.split("\\s+");
-
-        StringBuilder translateGoogle = new StringBuilder();
-        for (String word : words) {
-            Association<String, String> a = new Association<>(word.toLowerCase(), "");
-            Association<String, String> translatedWord = dictionary.get(a);
+            StringBuilder GoogleTranslate = new StringBuilder();
+            for (String word : words) {
+                Association<String, String> a = new Association<>(word.toLowerCase(), "");
+                Association<String, String> translatedWord = dictionary.get(a);
+                if (translatedWord != null) {
+                    GoogleTranslate.append(translatedWord.getValue()).append(" ");
+    
+                } else {
+                    GoogleTranslate.append("*").append(word).append("*").append(" ");
+                }
+            }
+            System.out.println("Traduccion: " + GoogleTranslate);
         }
     }
 }
