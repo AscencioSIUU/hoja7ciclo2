@@ -37,14 +37,14 @@ public class BST<E extends Comparable<E>> {
           }
           public int nodeHeight(){
                int currHeight = -1;
-               if(this.rightChild != null){
-                    currHeight = this.leftChild.nodeHeight();
+               if (this.leftChild != null){
+                   currHeight = this.leftChild.nodeHeight();
                }
-               if(this.rightChild != null){
-                    int rightHeight = this.leftChild.nodeHeight();
-                    if(rightHeight > currHeight){
-                         currHeight = rightHeight;
-                    }
+               if (this.rightChild != null){
+                   int rightHeight = this.rightChild.nodeHeight();
+                   if (rightHeight > currHeight){
+                       currHeight = rightHeight;
+                   }
                }
                return currHeight + 1;
           }
