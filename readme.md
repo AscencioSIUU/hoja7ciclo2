@@ -8,7 +8,8 @@
 
 Implementación de arboles binarios de busqueda en java, realizando un diccionario de ingles a español. Procesa un archivo de texto *.txt* el cual contiene ciertas palabras y su traducción de español a ingles. Para ello fue necesario utilizar una implementacion de clase **Association <K, V>** el cual representa las asociaciones del diccionario . 
 
-##### UML:![](C:\Users\andre\Desktop\Ernesto\git\hoja7ciclo2\UML.png)
+##### UML:
+![](C:\Users\andre\Desktop\Ernesto\git\hoja7ciclo2\UML.png)
 
 ##### Instalación:
 
